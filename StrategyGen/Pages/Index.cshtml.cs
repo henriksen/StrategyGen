@@ -10,13 +10,6 @@ namespace StrategyGen.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
         private readonly List<string> Words = new List<string>
         {
             "digital first", "agile", "open", "innovative", "efficiency", "competitive advantage", "ecosystem", "networked", "collaborative", " learning organisation", "social media", "revolution", "cloud based", "big data", "secure", "internet of things", "growth", "value", "customer focused", "digital business", "disruptive", "data leaders", "big data", "insight from data", "platform", "sustainable", "revolution", "culture"
