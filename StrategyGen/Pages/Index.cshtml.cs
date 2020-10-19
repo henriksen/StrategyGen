@@ -19,6 +19,8 @@ namespace StrategyGen.Pages
             "digital first", "agile", "open", "innovative", "networked", "collaborative", "cloud based", "secure", "customer focused", "disruptive", "sustainable"
         };
 
+
+
         public List<string> NounSalad { get; set; }
         public List<string> AdjectiveSalad { get; set; }
 
@@ -44,6 +46,18 @@ namespace StrategyGen.Pages
                 newList[n] = value;
             }
             return newList;
+        }
+    }
+
+    public static class StringExtensions
+    {
+        public static string WithArticle(this string word)
+        {
+            if ("aeiouAEIOU".Contains(word[0]))
+            {
+                return $"an {word}";
+            }
+            return $"a {word}";
         }
     }
 }
