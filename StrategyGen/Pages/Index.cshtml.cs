@@ -10,16 +10,22 @@ namespace StrategyGen.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly List<string> Words = new List<string>
+        private readonly List<string> Nouns = new List<string>
         {
-            "digital first", "agile", "open", "innovative", "efficiency", "competitive advantage", "ecosystem", "networked", "collaborative", " learning organisation", "social media", "revolution", "cloud based", "big data", "secure", "internet of things", "growth", "value", "customer focused", "digital business", "disruptive", "data leaders", "big data", "insight from data", "platform", "sustainable", "revolution", "culture"
+            "efficiency", "competitive advantage", "ecosystem", "learning organisation", "social media", "revolution", "big data", "internet of things", "growth", "value", "digital business","data leaders", "insight from data", "platform", "revolution", "culture"
+        };
+        private readonly List<string> Adjectives = new List<string>
+        {
+            "digital first", "agile", "open", "innovative", "networked", "collaborative", "cloud based", "secure", "customer focused", "disruptive", "sustainable"
         };
 
-        public List<string> WordSalad { get; set; }
+        public List<string> NounSalad { get; set; }
+        public List<string> AdjectiveSalad { get; set; }
 
         public void OnGet()
         {
-            WordSalad = Words.Shuffle<string>();
+            NounSalad = Nouns.Shuffle<string>();
+            AdjectiveSalad = Adjectives.Shuffle<string>();
         }
     }
 
